@@ -31,7 +31,7 @@ const config = {
         }]
     },
     plugins: [
-        new CleanWebpackPlugin(['docs']),
+        new CleanWebpackPlugin([path.resolve(__dirname, '../docs')]),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html')
         }),
