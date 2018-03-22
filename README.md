@@ -1,6 +1,6 @@
 # SimulateUI
 
-#### 开发
-```
-npm run start
-```
+[演示地址](https://peterzhanginc.github.io/SimulateUI/)
+
+#### 二维码
+![Alt text](assets/qrcode.png)
