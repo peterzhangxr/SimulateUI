@@ -36,7 +36,7 @@ const config = {
             template: path.resolve(__dirname, '../src/index.html')
         }),
         new HtmlWebpackPlugin({
-            filename: 'widget/button.html',
+            filename: 'button.html',
             template: path.resolve(__dirname, '../src/widget/button.html')
         })
     ]
