@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.7",
@@ -21,6 +22,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "webpack-dev-server --config ./build/webpack.config.js --open",
+    "build": "webpack --config ./build/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

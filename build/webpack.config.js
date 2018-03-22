@@ -3,7 +3,7 @@
  */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-console.log(path.resolve(__dirname, '../docs'))
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const config = {
     entry: path.resolve(__dirname, '../src/index.js'),
     output: {
@@ -31,11 +31,12 @@ const config = {
         }]
     },
     plugins: [
+        new CleanWebpackPlugin(['docs']),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html')
         }),
         new HtmlWebpackPlugin({
-            filename: 'button.html',
+            filename: 'widget/button.html',
             template: path.resolve(__dirname, '../src/widget/button.html')
         })
     ]
