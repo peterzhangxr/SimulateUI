@@ -1,0 +1,58 @@
+.button-size(@padding, @font-size, @line-height, @border-radius) {
+    padding: @padding;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
+
+
+.button-variant(@background, @color) {
+    color: @color;
+    &:hover,
+    &:active,
+    &:focus,
+    &__hover,
+    &__active,
+    &__focus {
+        background-color: darken(@background, 10%);
+    }
+
+    &.@{prefix}-btn__disabled {
+        &:hover,
+        &:active,
+        &:focus,
+        &__hover,
+        &__active,
+        &__focus {
+            background-color: @background;
+        }
+    }
+
+    &.@{prefix}-btn__outline {
+        border-color: @background;
+        background-color: #fff;
+        color: @background;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &__hover,
+        &__active,
+        &__focus {
+            background-color: @background;
+            color: @color;
+        }
+
+        &.@{prefix}-btn__disabled {
+            &:hover,
+            &:active,
+            &:focus,
+            &__hover,
+            &__active,
+            &__focus {
+                background-color: #fff;
+                color: @background;
+            }
+        }
+    }
+}

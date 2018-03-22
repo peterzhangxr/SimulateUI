@@ -1,0 +1,95 @@
+.@{prefix}-btn {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    background-image: none;
+    margin-top: 15px;
+
+    //默认尺寸
+    .button-size(14px 28px, 14px, 1, 2px);
+
+    &__block {
+        display: block;
+        width: 100%;
+    }
+
+    &__default {
+        color: @text-default;
+        background-color: @bg-default;
+        .button-variant(@bg-default, @text-default);
+        &.@{prefix}-btn__outline {
+            border-color: #777;
+            background-color: #fff;
+            color: @text-default;
+        }
+    }
+
+    &__primary {
+        color: #fff;
+        background-color: @color-primary;
+        .button-variant(@color-primary, #fff);
+    }
+
+    &__info {
+        color: #fff;
+        background-color: @color-info;
+        .button-variant(@color-info, #fff);
+    }
+
+    &__warning {
+        color: #fff;
+        background-color: @color-warning;
+        .button-variant(@color-warning, #fff);
+    }
+
+    &__success {
+        color: #fff;
+        background-color: @color-success;
+        .button-variant(@color-success, #fff);
+    }
+
+    &__error {
+        color: #fff;
+        background-color: @color-error;
+        .button-variant(@color-error, #fff);
+    }
+
+    &__lg {
+        .button-size(16px 32px, 15px, 1, 2px);
+    }
+
+    &__md {
+        .button-size(13px 26px, 14px, 1, 2px);
+    }
+
+    &__xs {
+        .button-size(12px 24px, 14px, 1, 2px);
+    }
+
+    &__sm {
+        .button-size(7px 14px, 12px, 1, 2px);
+    }
+
+    &__disabled {
+        cursor: not-allowed;
+        opacity: 0.65;
+    }
+    &__round {
+        border-radius: 100px;
+    }
+
+    &__circle {
+        border-radius: 50%;
+        padding: 0;
+    }
+    &__shadow {
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12)
+    }
+}
