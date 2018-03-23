@@ -10,10 +10,11 @@
     white-space: nowrap;
     border: 1px solid transparent;
     background-image: none;
-    margin-top: 15px;
+    line-height: 1;
+    margin-top: 15/14rem;
 
     //默认尺寸
-    .button-size(14px 28px, 14px, 1, 2px);
+    .button-size(@btn-default-padding, @btn-default-font-size);
 
     &__block {
         display: block;
@@ -62,19 +63,19 @@
     }
 
     &__lg {
-        .button-size(16px 32px, 15px, 1, 2px);
+        .button-size(@btn-lg-padding, @btn-lg-font-size);
     }
 
     &__md {
-        .button-size(13px 26px, 14px, 1, 2px);
+        .button-size(@btn-md-padding, @btn-md-font-size);
     }
 
     &__xs {
-        .button-size(12px 24px, 14px, 1, 2px);
+        .button-size(@btn-xs-padding, @btn-xs-font-size);
     }
 
     &__sm {
-        .button-size(7px 14px, 12px, 1, 2px);
+        .button-size(@btn-sm-padding, @btn-sm-font-size);
     }
 
     &__disabled {
@@ -82,7 +83,7 @@
         opacity: 0.65;
     }
     &__round {
-        border-radius: 100px;
+        border-radius: 100/12rem;
     }
 
     &__circle {

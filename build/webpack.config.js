@@ -9,7 +9,6 @@ const config = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, '../docs'),
-        publicPath: './'
     },
     devServer: {
         contentBase: path.resolve(__dirname, '../docs')
@@ -31,13 +30,21 @@ const config = {
         }]
     },
     plugins: [
-        new CleanWebpackPlugin([path.resolve(__dirname, '../docs')]),
+        new CleanWebpackPlugin(['../docs']),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html')
         }),
         new HtmlWebpackPlugin({
             filename: 'button.html',
             template: path.resolve(__dirname, '../src/widget/button.html')
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'flex.html',
+            template: path.resolve(__dirname, '../src/widget/flex.html')
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'list.html',
+            template: path.resolve(__dirname, '../src/widget/list.html')
         })
     ]
 }

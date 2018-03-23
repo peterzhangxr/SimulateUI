@@ -1,0 +1,57 @@
+@import "mixins/_button";
+
+.border-top(@color) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    border-top: 1px solid @color;
+    color: @color;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+
+.border-bottom(@color) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid @color;
+    color: @color;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+
+.clearfix() {
+    clear: both;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.arrow() {
+    content: " ";
+    display: inline-block;
+    height: @cell-ft-arrow;
+    width: @cell-ft-arrow;
+    border-width: 1px 1px 0 0;
+    border-color: #cecece;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -@cell-ft-arrow/2;
+    right: 0;
+}
