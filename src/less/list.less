@@ -29,7 +29,9 @@
         left: @cell-padding-vertical;
     }
     &__hd {
-
+        color: @text-default;
+        font-size: 14px;
+        min-width: @label-width;
     }
     &__bd {
         font-size: 14px;
@@ -42,7 +44,36 @@
         position: relative;
         padding-right: @cell-ft-padding;
         &:after {
-           .arrow()
+            .arrow()
         }
+
+        &__none {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__none {
+        padding-bottom: 0;
+        &:after {
+            border: none;
+        }
+    }
+
+    &__icon {
+        align-items: flex-start;
+        >.@{prefix}-cell__hd {
+            min-width: 2.5rem;
+        }
+        &:after {
+            left: 3.5rem;
+        }
+    }
+    &__label {
+        font-size: 14px;
+        color: @text-default;
+        margin-bottom: 15/12rem;
+        display: block;
     }
 }

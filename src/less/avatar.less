@@ -1,0 +1,23 @@
+.@{prefix}-avatar {
+    position: relative;
+    width: @avatar-default-size;
+    height: @avatar-default-size;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        opacity: 0;
+    }
+}

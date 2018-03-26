@@ -1,0 +1,49 @@
+.@{prefix}-grids {
+    position: relative;
+    overflow: hidden;
+    padding: @grid-default-padding;
+    &.col-2 {
+        .@{prefix}-grid {
+            width: 50%;
+        }
+    }
+
+    &.col-3 {
+        .@{prefix}-grid {
+            width: 100/3%;
+        }
+    }
+
+    &.col-4 {
+        .@{prefix}-grid {
+            width: 25%;
+        }
+    }
+
+    .clearfix();
+
+
+}
+
+.@{prefix}-grid {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    padding: @grid-default-padding;
+    &__container {
+        position: relative;
+    }
+
+    &__square {
+        padding-top: 100%;
+        position: relative;
+    }
+
+    &__box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
