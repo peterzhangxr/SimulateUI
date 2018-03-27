@@ -2,8 +2,36 @@
  * Created by peterzhang on 2018/3/22.
  */
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const _widget = path.resolve(__dirname, '../src/widget')
+
+const plugins = (() => {
+    let plugins = [];
+
+    plugins.push(new CleanWebpackPlugin(['dist', 'docs'], {
+        root: path.resolve(__dirname, '../')
+    }));
+
+    //处理模版文件
+    plugins.push(new HtmlWebpackPlugin({
+        filename: 'index.html',
+        template: path.resolve(__dirname, '../src/index.html')
+    }));
+
+    let widgetFiles = glob.sync(_widget + '/*.html')
+    widgetFiles.forEach((filePath) => {
+        let filename = filePath.replace(_widget + '/', '');
+        plugins.push(new HtmlWebpackPlugin({
+            filename: filename,
+            template: filePath
+        }))
+    })
+
+    return plugins;
+})();
 
 const config = {
     entry: path.resolve(__dirname, '../src/index.js'),
@@ -30,32 +58,7 @@ const config = {
             ]
         }]
     },
-    plugins: [
-        new CleanWebpackPlugin(['../docs']),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/index.html')
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'button.html',
-            template: path.resolve(__dirname, '../src/widget/button.html')
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'flex.html',
-            template: path.resolve(__dirname, '../src/widget/flex.html')
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'list.html',
-            template: path.resolve(__dirname, '../src/widget/list.html')
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'grid.html',
-            template: path.resolve(__dirname, '../src/widget/grid.html')
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'input.html',
-            template: path.resolve(__dirname, '../src/widget/input.html')
-        })
-    ]
+    plugins: plugins
 }
 
 module.exports = config;
