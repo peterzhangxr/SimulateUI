@@ -505,7 +505,7 @@ li {
   align-items: flex-start;
 }
 .su-cell__icon > .su-cell__hd {
-  min-width: 2.5rem;
+  min-width: 2.5rem!important;
 }
 .su-cell__icon:after {
   left: 3.5rem;
