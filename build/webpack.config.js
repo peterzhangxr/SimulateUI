@@ -5,15 +5,19 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const _widget = path.resolve(__dirname, '../src/widget')
 
+const extractLESS = new ExtractTextPlugin('style.css');
 const plugins = (() => {
     let plugins = [];
 
     plugins.push(new CleanWebpackPlugin(['dist', 'docs'], {
         root: path.resolve(__dirname, '../')
     }));
+
+    plugins.push(extractLESS)
 
     //处理模版文件
     plugins.push(new HtmlWebpackPlugin({
@@ -46,11 +50,7 @@ const config = {
     module: {
         rules: [{
             test: /\.less$/,
-            use: [
-                'style-loader',
-                'css-loader',
-                'less-loader'
-            ]
+            use: extractLESS.extract(['css-loader', 'less-loader'])
         }, {
             test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
             use: [
