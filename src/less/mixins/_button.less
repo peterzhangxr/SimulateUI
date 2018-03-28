@@ -21,6 +21,7 @@
         &__hover,
         &__active,
         &__focus {
+            color: @color;
             background-color: @background;
         }
     }
@@ -50,6 +51,21 @@
                 background-color: #fff;
                 color: @background;
             }
+        }
+    }
+
+    &.@{prefix}-btn__flat {
+        background-color: transparent;
+        color: @background;
+        border: none;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &__hover,
+        &__active,
+        &__focus {
+            background-color: lighten(@background, 35%);
         }
     }
 }

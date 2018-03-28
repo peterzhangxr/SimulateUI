@@ -22,13 +22,35 @@
     }
 
     &__default {
-        color: @text-default;
+        color: @text-dark;
         background-color: @bg-default;
-        .button-variant(@bg-default, @text-default);
+        .button-variant(@bg-default, @text-dark);
         &.@{prefix}-btn__outline {
             border-color: #777;
             background-color: #fff;
-            color: @text-default;
+            color: @text-dark;
+            &.@{prefix}-btn__disabled {
+                &:hover,
+                &:active,
+                &:focus,
+                &__hover,
+                &__active,
+                &__focus {
+                    color: @text-dark;
+                }
+            }
+        }
+
+        &.@{prefix}-btn__flat {
+            color: @text-dark;
+            &:hover,
+            &:active,
+            &:focus,
+            &__hover,
+            &__active,
+            &__focus {
+                background-color: @bg-default;
+            }
         }
     }
 
@@ -93,4 +115,5 @@
     &__shadow {
         box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12)
     }
+
 }
