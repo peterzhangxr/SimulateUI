@@ -1,0 +1,54 @@
+.@{prefix}-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transition: .5s cubic-bezier(.25,.8,.5,1);
+    z-index: @dialog-default-index;
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: inherit;
+        transition-delay: .15s;
+        background: #212116;
+    }
+
+    &__active {
+        &:before {
+            opacity: 0.46;
+        }
+    }
+
+}
+.@{prefix}-dialog {
+    position: fixed;
+    left: 50%;
+    z-index: @dialog-default-index + 100;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    max-height: 90%;
+    overflow: hidden;
+
+    &__active {
+        opacity: 1;
+    }
+
+    .@{prefix}-card {
+        border-radius: 2px;
+    }
+
+    &__scroll {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

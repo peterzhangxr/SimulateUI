@@ -1,0 +1,43 @@
+.@{prefix}-card {
+    display: block;
+    position: relative;
+    background: #ffffff;
+
+    &__title {
+        color: @text-dark;
+        font-size: 16px;
+        padding: @card-padding;
+        &__primary {
+            background: @color-primary;
+            color: #fff;
+        }
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    &__content {
+        color: @text-default;
+        font-size: 14px;
+        padding: @card-padding;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        padding: @card-padding/2 @cell-ft-arrow;
+        > * {
+            margin: 0 2px;
+        }
+
+        &__right {
+            justify-content: flex-end;
+        }
+    }
+
+    &__boundless {
+        .@{prefix}-card__content {
+            padding: @card-padding 0;
+        }
+    }
+
+}
