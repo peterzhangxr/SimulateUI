@@ -1,0 +1,68 @@
+.@{prefix}-message {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    z-index: @dialog-default-index + 200;
+    .elevation(2);
+    padding: @card-padding;
+    color: @text-dark;
+    font-size: 14px;
+    background: #fff;
+    width: 75%;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    &__active {
+        opacity: 1;
+        top: @message-top;
+    }
+    i {
+        margin-right: 10px;
+    }
+
+    &__primary {
+        i {
+            color: @color-primary;
+        }
+    }
+
+    &__error {
+        i {
+            color: @color-error;
+        }
+    }
+
+    &__success {
+        i {
+            color: @color-success;
+        }
+    }
+
+    &__info {
+        i {
+            color: @color-info;
+        }
+    }
+
+    &__warning {
+        i {
+            color: @color-warning;
+        }
+    }
+
+    &__spacer {
+        flex: 1;
+    }
+
+    &__close {
+        color: @text-light;
+    }
+
+    &__text {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,8 @@
+.loop(24);
+.loop(@n, @i:1) when(@i =< @n) {
+    .@{prefix}-elevation-@{i} {
+        .elevation(@i);
+    }
+    .loop(@n, (@i + 1));
+}
+
