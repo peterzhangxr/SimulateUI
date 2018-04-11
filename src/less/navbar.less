@@ -1,0 +1,49 @@
+.@{prefix}-navbar {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: @navbar-height;
+
+    &__item {
+        flex: 1;
+        padding: @navbar-padding-default @navbar-padding-item;
+        text-align: center;
+        display: block;
+        &__active {
+            .@{prefix}-navbar__text {
+                color: @color-primary;
+                border-bottom: @navbar-border-width solid @color-primary;
+            }
+        }
+
+        &__left {
+            text-align: left;
+        }
+
+        &__right {
+            text-align: right;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        font-size: @navbar-font-size;
+        text-align: center;
+        color: @text-dark;
+        height: @navbar-height-text;
+        line-height: @navbar-height-text;
+    }
+
+    &__fixed {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: @dialog-default-index - 100;
+    }
+
+    &__content {
+        padding-top: @navbar-height;
+    }
+
+}
+

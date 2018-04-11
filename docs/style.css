@@ -1178,6 +1178,100 @@ input[type="file"] {
   font-size: 42px;
   margin-bottom: 1rem;
 }
+.su-navbar {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 3.66666667rem;
+}
+.su-navbar__item {
+  flex: 1;
+  padding: 0.66666667rem 1.66666667rem;
+  text-align: center;
+  display: block;
+}
+.su-navbar__item__active .su-navbar__text {
+  color: #f25b4a;
+  border-bottom: 0.16666667rem solid #f25b4a;
+}
+.su-navbar__item__left {
+  text-align: left;
+}
+.su-navbar__item__right {
+  text-align: right;
+}
+.su-navbar__text {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  height: 2.33333333rem;
+  line-height: 2.33333333rem;
+}
+.su-navbar__fixed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 899;
+}
+.su-navbar__content {
+  padding-top: 3.66666667rem;
+}
+.su-tabbar {
+  display: flex;
+  background-color: #fafafa;
+  width: 100%;
+  height: 4.08333333rem;
+}
+.su-tabbar__item {
+  flex: 1;
+  padding: 0.41666667rem 0;
+  text-align: center;
+  color: #888;
+  cursor: pointer;
+  display: block;
+}
+.su-tabbar__item__active {
+  font-weight: bold;
+  color: #f25b4a;
+}
+.su-tabbar__icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 20px;
+}
+.su-tabbar__icon img {
+  max-width: 100%;
+}
+.su-tabbar__text {
+  font-size: 12px;
+  height: 1.16666667rem;
+  line-height: 1.16666667rem;
+}
+.su-tabbar__fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.su-tabbar__fixed:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid #eee;
+  color: #eee;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+}
+.su-tabbar__content {
+  padding-bottom: 5.08333333rem;
+  height: 100%;
+}
 html,
 body {
   height: 100%;

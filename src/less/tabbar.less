@@ -1,0 +1,52 @@
+.@{prefix}-tabbar {
+    display: flex;
+    background-color: @tabbar-background-color;
+    width: 100%;
+    height: @tabbar-height;
+
+    &__item {
+        flex: 1;
+        padding: @tabbar-padding 0;
+        text-align: center;
+        color: @tabbar-color;
+        cursor: pointer;
+        display: block;
+
+        &__active {
+            font-weight: bold;
+            color: @color-primary;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: @tabbar-icon-width;
+        height: @tabbar-icon-width;
+        line-height: @tabbar-icon-width;
+        font-size: 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+
+    &__text {
+        font-size: @tabbar-font-size;
+        height: @tabbar-height-text;
+        line-height: @tabbar-height-text;
+    }
+
+    &__fixed {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        &:before {
+            .border-top(#eee)
+        }
+    }
+
+    &__content {
+        padding-bottom: @tabbar-height + 1;
+        height: 100%;
+    }
+}
