@@ -1,0 +1,27 @@
+.@{prefix}-actionsheet {
+    background: @bg-default;
+    &__menu, &__action {
+        background-color: #fff;
+        :first-child {
+            &:before {
+                border: none;
+            }
+        }
+    }
+    &__item {
+        display: block;
+        position: relative;
+        font-size: 16px;
+        text-align: center;
+        color: @text-dark;
+        padding: @actionsheet-item-padding;
+        cursor: pointer;
+        &:before {
+            .border-top(@border-color)
+        }
+    }
+
+    &__action {
+        margin-top: @actionsheet-action-margin;
+    }
+}

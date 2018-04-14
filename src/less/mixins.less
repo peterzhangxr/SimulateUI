@@ -1,7 +1,7 @@
 @import "mixins/_button";
 @import "mixins/_elevation";
 
-.border-top(@color) {
+.border-top(@color: @border-color) {
     content: "";
     position: absolute;
     left: 0;
@@ -15,7 +15,7 @@
     -webkit-transform: scaleY(0.5);
 }
 
-.border-bottom(@color) {
+.border-bottom(@color: @border-color) {
     content: "";
     position: absolute;
     left: 0;
