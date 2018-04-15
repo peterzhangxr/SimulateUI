@@ -1,0 +1,35 @@
+.@{prefix}-spin {
+    position: relative;
+    display: inline-block;
+    height: @spin-default-size;
+    width: @spin-default-size;
+    overflow: hidden;
+    font-size: @spin-default-font-size;
+    color: #fff;
+    animation: rotate 1.2s infinite linear;
+
+    &__primary {
+        color: @color-primary;
+    }
+    &__info {
+        color: @color-info;
+    }
+    &__error {
+        color: @color-error;
+    }
+    &__warning {
+        color: @color-warning;
+    }
+    &__success {
+        color: @color-success;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
