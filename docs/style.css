@@ -1550,7 +1550,7 @@ img {
 .su-search-bar {
   position: relative;
   color: #999;
-  border-radius: 2px;
+  border-radius: 100px;
   height: 2.33333333rem;
   background-color: #fff;
   cursor: text;
@@ -1578,6 +1578,8 @@ img {
   bottom: 0;
   line-height: 2.33333333rem;
   cursor: pointer;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 .su-search-bar__active {
   display: flex;
@@ -1600,6 +1602,7 @@ img {
   position: relative;
   flex: 1;
   padding: 0 2.75rem;
+  border-radius: 100px;
 }
 .su-search-bar__input input {
   width: 100%;
