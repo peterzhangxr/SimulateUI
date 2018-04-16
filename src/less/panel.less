@@ -5,9 +5,6 @@
     background-color: #fff;
     &__hd {
         position: relative;
-        &:after {
-            .border-bottom();
-        }
     }
     &__bd {
         position: relative;
@@ -20,7 +17,7 @@
         }
 
         &__padding {
-            padding: 0 @panel-default-padding;
+            padding: @panel-default-padding-vertical @panel-default-padding;
         }
 
         &__padding-left {
