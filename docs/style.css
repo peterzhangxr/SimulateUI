@@ -1639,19 +1639,6 @@ img {
 .su-panel__hd {
   position: relative;
 }
-.su-panel__hd:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  border-bottom: 1px solid #e5e5e5;
-  color: #e5e5e5;
-  transform-origin: 0 0;
-  transform: scaleY(0.5);
-  -webkit-transform: scaleY(0.5);
-}
 .su-panel__bd {
   position: relative;
 }
@@ -1669,7 +1656,7 @@ img {
   -webkit-transform: scaleY(0.5);
 }
 .su-panel__bd__padding {
-  padding: 0 1rem;
+  padding: 1.25rem 1rem;
 }
 .su-panel__bd__padding-left {
   padding: 0 0 0 1rem;
@@ -1753,6 +1740,26 @@ img {
 }
 .su-box .su-btn {
   margin-top: 0;
+}
+.su-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.su-tools__item {
+  flex: 1;
+  text-align: center;
+}
+.su-tools__icon {
+  display: inline-block;
+  font-size: 24px;
+  width: 2rem;
+  height: 2rem;
+}
+.su-tools__label {
+  font-size: 12px;
+  color: #666;
+  margin-top: 0.83333333rem;
 }
 html,
 body {
