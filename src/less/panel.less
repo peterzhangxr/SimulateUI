@@ -1,0 +1,48 @@
+.@{prefix}-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    &__hd {
+        position: relative;
+        &:after {
+            .border-bottom();
+        }
+    }
+    &__bd {
+        position: relative;
+        .@{prefix}-box {
+            &:last-child {
+                &:after {
+                    .border-bottom(transparent)
+                }
+            }
+        }
+
+        &__padding {
+            padding: 0 @panel-default-padding;
+        }
+
+        &__padding-left {
+            padding: 0 0 0 @panel-default-padding;
+            .@{prefix}-box {
+                padding-left: 0;
+            }
+        }
+    }
+
+    & + .@{prefix}-panel {
+        margin-top: @cell-padding-horizontal;
+    }
+
+    &__ft {
+        position: relative;
+        &:before {
+            .border-top();
+        }
+    }
+
+    .@{prefix}-btn {
+        margin-top: 0;
+    }
+}

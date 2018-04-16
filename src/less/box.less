@@ -1,0 +1,50 @@
+.@{prefix}-box {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    padding: @box-default-padding @panel-default-padding;
+    &:after {
+        .border-bottom(@border-color);
+    }
+    &__bd {
+        flex: 1;
+        display: flex;
+        padding: 0 @box-hd-padding;
+        flex-direction: column;
+        justify-content: space-between;
+        &__start {
+            justify-content: space-between;
+        }
+
+        &__center {
+            justify-content: center;
+        }
+    }
+
+    &__ft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__start {
+            justify-content: space-between;
+        }
+
+        &__center {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        color: @text-dark;
+        font-size: 16px;
+    }
+    &__subtitle {
+        color: @text-light;
+        font-size: 14px;
+        margin-top: @box-hd-padding;
+    }
+
+    .@{prefix}-btn {
+        margin-top: 0;
+    }
+}
