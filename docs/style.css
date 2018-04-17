@@ -1934,7 +1934,7 @@ img {
 }
 .su-calendar__title__hd,
 .su-calendar__title__ft {
-  width: 25%;
+  width: 20%;
   display: flex;
   justify-content: flex-end;
 }
@@ -1953,7 +1953,9 @@ img {
 }
 .su-calendar__arrow {
   display: flex;
+  height: 100%;
   text-align: center;
+  overflow: hidden;
 }
 .su-calendar__arrow__btn {
   width: 3.66666667rem;
