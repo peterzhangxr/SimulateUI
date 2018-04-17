@@ -1953,7 +1953,6 @@ img {
 }
 .su-calendar__arrow {
   display: flex;
-  height: 100%;
   text-align: center;
 }
 .su-calendar__arrow__btn {
