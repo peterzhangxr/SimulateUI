@@ -1,0 +1,80 @@
+.@{prefix}-switch {
+    position: relative;
+    display: inline-block;
+    width: @switch-default-width;
+    height: @input-default-height;
+    padding: @switch-padding 0;
+    cursor: pointer;
+    &__input {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+        opacity: 0;
+
+        &:checked + .@{prefix}-switch__box {
+            border: none;
+            &:before {
+                transform: scale(0);
+            }
+            &:after {
+                @translate: @switch-default-width - (@input-default-height - 2 * @switch-padding);
+                transform: translateX(@translate);
+            }
+        }
+
+        &:checked + .@{prefix}-switch__primary {
+            background-color: @color-primary;
+        }
+
+        &:checked + .@{prefix}-switch__warning {
+            background-color: @color-warning;
+        }
+
+        &:checked + .@{prefix}-switch__success {
+            background-color: @color-success;
+        }
+
+        &:checked + .@{prefix}-switch__info {
+            background-color: @color-info;
+        }
+
+        &:checked + .@{prefix}-switch__error {
+            background-color: @color-error;
+        }
+    }
+    &__box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: @switch-radius;
+        border: 1px solid @border-color;
+        transition: background-color 0.1s, border 0.1s;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: #fdfdfd;
+            transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+            border-radius: @switch-radius;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: @input-default-height - 2 * @switch-padding;
+            transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+            background-color: #fff;
+            .elevation(2);
+            border-radius: 50%;
+        }
+
+    }
+}
