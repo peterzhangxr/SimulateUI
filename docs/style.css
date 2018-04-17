@@ -1963,6 +1963,7 @@ img {
 .su-calendar__arrow__text {
   flex: 1;
   font-size: 16px;
+  white-space: nowrap;
 }
 .su-calendar__week {
   display: flex;
