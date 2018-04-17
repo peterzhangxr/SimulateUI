@@ -8,20 +8,37 @@
     color: #fff;
     animation: rotate 1.2s infinite linear;
 
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    path {
+        fill: #fff;
+    }
     &__primary {
-        color: @color-primary;
+        path {
+            fill: @color-primary;
+        }
     }
     &__info {
-        color: @color-info;
+        path {
+            fill: @color-info;
+        }
     }
     &__error {
-        color: @color-error;
+        path {
+            fill: @color-error;
+        }
     }
     &__warning {
-        color: @color-warning;
+        path {
+            fill: @color-warning;
+        }
     }
     &__success {
-        color: @color-success;
+        path {
+            fill: @color-success;
+        }
     }
 }
 

@@ -1,0 +1,238 @@
+.@{prefix}-calendar {
+    position: relative;
+    background-color: #fff;
+    &__hd {
+
+    }
+
+    &__title {
+        display: flex;
+        height: @calendar-title-height;
+        line-height: @calendar-title-height;
+        padding: 0 @calendar-title-padding;
+        align-items: center;
+        &__hd, &__ft {
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+            div {
+                flex: 1;
+                font-size: 14px;
+                text-align: right;
+            }
+
+            .@{prefix}-btn {
+                margin-top: 0;
+            }
+        }
+        &__bd {
+            flex: 1;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        height: 100%;
+        text-align: center;
+        &__btn {
+            width: @calendar-title-height;
+            font-size: 24px;
+            color: @text-dark;
+        }
+        &__text {
+            flex: 1;
+            font-size: 16px;
+        }
+    }
+    &__week {
+        display: flex;
+        &__cell {
+            flex: 1;
+            font-size: 12px;
+            height: @calendar-week-height;
+            line-height: @calendar-week-height;
+            text-align: center;
+        }
+    }
+
+    &__days {
+
+    }
+
+    &__day {
+        &__row {
+            display: flex;
+            text-align: center;
+            padding: @calendar-day-row-padding 0;
+        }
+        &__cell {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+        }
+        &__disabled {
+            opacity: 0.25;
+        }
+        &__text {
+            position: relative;
+            width: @calendar-day-cell-width;
+            height: @calendar-day-cell-width;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__subtitle {
+            font-size: 12px;
+            color: @text-light;
+        }
+    }
+    &__today, &__select {
+        .@{prefix}-calendar__day {
+            &__text {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__primary {
+        .@{prefix}-calendar {
+            &__today {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: #fff;
+                        background-color: @color-primary;
+                    }
+                    &__subtitle {
+                        color: #fff;
+                    }
+                }
+            }
+            &__select {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: @color-primary;
+                        border: 1px solid @color-primary;
+                    }
+                    &__subtitle {
+                        color: @color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+        .@{prefix}-calendar {
+            &__today {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: #fff;
+                        background-color: @color-info;
+                    }
+                    &__subtitle {
+                        color: #fff;
+                    }
+                }
+            }
+            &__select {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: @color-info;
+                        border: 1px solid @color-info;
+                    }
+                    &__subtitle {
+                        color: @color-info;
+                    }
+                }
+            }
+        }
+    }
+
+    &__success {
+        .@{prefix}-calendar {
+            &__today {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: #fff;
+                        background-color: @color-success;
+                    }
+                    &__subtitle {
+                        color: #fff;
+                    }
+                }
+            }
+            &__select {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: @color-success;
+                        border: 1px solid @color-success;
+                    }
+                    &__subtitle {
+                        color: @color-success;
+                    }
+                }
+            }
+        }
+    }
+
+    &__warning {
+        .@{prefix}-calendar {
+            &__today {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: #fff;
+                        background-color: @color-warning;
+                    }
+                    &__subtitle {
+                        color: #fff;
+                    }
+                }
+            }
+            &__select {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: @color-warning;
+                        border: 1px solid @color-warning;
+                    }
+                    &__subtitle {
+                        color: @color-warning;
+                    }
+                }
+            }
+        }
+    }
+
+    &__error {
+        .@{prefix}-calendar {
+            &__today {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: #fff;
+                        background-color: @color-error;
+                    }
+                    &__subtitle {
+                        color: #fff;
+                    }
+                }
+            }
+            &__select {
+                .@{prefix}-calendar__day {
+                    &__text {
+                        color: @color-error;
+                        border: 1px solid @color-error;
+                    }
+                    &__subtitle {
+                        color: @color-error;
+                    }
+                }
+            }
+        }
+    }
+}
