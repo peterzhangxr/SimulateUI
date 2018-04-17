@@ -1,0 +1,42 @@
+@btn-height: @input-default-height - 2*@number-padding;
+.@{prefix}-number {
+    height: @input-default-height;
+    padding: @number-padding;
+    display: flex;
+    position: relative;
+    vertical-align: middle;
+    &__btn, &__input {
+        flex: 1;
+        text-align: center;
+    }
+
+    &__input {
+        min-width: 35px;
+        input {
+            display: inline-block;
+            height: @btn-height;
+            text-align: center;
+            width: 100%;
+            color: @text-default;
+        }
+        &__readonly {
+            color: @text-default;
+            line-height: @btn-height;
+            height: @btn-height;
+        }
+    }
+    &__btn {
+        font-size: 24px;
+        color: @text-light;
+        height: @btn-height;
+        line-height: @btn-height;
+        background-color: @bg-default;
+        border-radius: 50%;
+        width: @btn-height;
+
+        &__primary {
+            background-color: @color-primary;
+            color: #fff;
+        }
+    }
+}
