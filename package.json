@@ -28,8 +28,8 @@
   },
   "name": "simulate-ui",
   "description": "A UI Library For Web Application",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.1",
+  "main": "dist/simulate.css",
   "directories": {
     "doc": "docs"
   },
@@ -43,10 +43,7 @@
     "type": "git",
     "url": "git+https://github.com/PeterZhangInc/SimulateUI.git"
   },
-  "author": {
-      "name":"PeterZhang",
-      "email": "peter.zhang.henan@gmail.com"
-  },
+  "author": "PeterZhang <peter.zhang.henan@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PeterZhangInc/SimulateUI/issues"
