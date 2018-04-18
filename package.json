@@ -43,7 +43,10 @@
     "type": "git",
     "url": "git+https://github.com/PeterZhangInc/SimulateUI.git"
   },
-  "author": "PeterZhang",
+  "author": {
+      "name":"PeterZhang",
+      "email": "peter.zhang.henan@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PeterZhangInc/SimulateUI/issues"
