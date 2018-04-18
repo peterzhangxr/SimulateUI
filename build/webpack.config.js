@@ -50,7 +50,14 @@ const config = {
     module: {
         rules: [{
             test: /\.less$/,
-            use: extractLESS.extract(['css-loader', 'less-loader'])
+            use: extractLESS.extract(['css-loader', 'less-loader', {
+                loader: 'postcss-loader',
+                options: {
+                    config: {
+                        path: path.resolve(__dirname, './postcss.config.js')
+                    }
+                }
+            }])
         }, {
             test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
             use: [
