@@ -28,7 +28,7 @@
   },
   "name": "simulate-ui",
   "description": "A UI Library For Web Application",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/simulate.css",
   "directories": {
     "doc": "docs"
