@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^8.3.0",
     "browser-sync": "^2.23.6",
     "clean-webpack-plugin": "^0.1.19",
@@ -33,7 +33,6 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "webpack-dev-server --config ./build/webpack.config.js --open",
     "build": "webpack --config ./build/webpack.config.js && gulp",
