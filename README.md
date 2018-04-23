@@ -1,7 +1,7 @@
 # SimulateUI
 
 [![npm](https://img.shields.io/npm/v/simulate-ui.svg?maxAge=3600)](https://www.npmjs.com/package/simulate-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/simulate-ui.svg)](https://npmjs.org/package/simlulate-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/simulate-ui.svg)](https://npmjs.org/package/simulate-ui)
 
 A UI Library for Web Applications
 # Mobile Demo
