@@ -1,8 +1,7 @@
 # SimulateUI
 
-[![MIT License][license-badge]][LICENSE]
-[![version][version-badge]][package]
-[![node-version][node-version-badge]][node]
+[![npm](https://img.shields.io/npm/v/simulate-ui.svg?maxAge=3600)](https://www.npmjs.com/package/simulate-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/simulate-ui.svg)](https://npmjs.org/package/simlulate-ui)
 
 A UI Library for Web Applications
 # Mobile Demo
