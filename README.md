@@ -1,5 +1,9 @@
 # SimulateUI
 
+[![MIT License][license-badge]][LICENSE]
+[![version][version-badge]][package]
+[![node-version][node-version-badge]][node]
+
 A UI Library for Web Applications
 # Mobile Demo
 [演示地址](https://peterzhanginc.github.io/SimulateUI/)
