@@ -15,8 +15,7 @@ var browserSync = require('browser-sync');
 var pkg = require('./package.json');
 
 var option = {base: 'src/less'};
-var dist = __dirname + '/dist';
-console.log(dist)
+var dist = __dirname + '/dist/style';
 var banner = [
     '/*!',
     ' * SimulateUI v<%= pkg.version %> (<%= pkg.homepage %>)',
@@ -35,7 +34,7 @@ gulp.task('default', function () {
                 this.emit('end');
             })
         )
-        .pipe(postcss([autoprefixer(['iOS >= 8', 'Android >= 5']), comments()]))
+        .pipe(postcss([autoprefixer(['iOS >= 9', 'Android >= 6']), comments()]))
         .pipe(header(banner, { pkg: pkg }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dist))
