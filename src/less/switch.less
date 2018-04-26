@@ -25,6 +25,10 @@
             }
         }
 
+        &:disabled + .@{prefix}-switch__box {
+            opacity: .5;
+        }
+
         &:checked + .@{prefix}-switch__primary {
             background-color: @color-primary;
         }

@@ -4,17 +4,22 @@
     height: @spin-default-size;
     width: @spin-default-size;
     overflow: hidden;
-    font-size: @spin-default-font-size;
     color: #fff;
-    animation: rotate 1.2s infinite linear;
 
     svg {
         width: 100%;
         height: 100%;
+        animation: rotate 1.2s infinite linear;
     }
     path {
         fill: #fff;
     }
+    &__default {
+        path {
+            fill: #fff;
+        }
+    }
+
     &__primary {
         path {
             fill: @color-primary;

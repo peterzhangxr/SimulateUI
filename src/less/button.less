@@ -105,7 +105,7 @@
         opacity: 0.65;
     }
     &__round {
-        border-radius: 100/12rem;
+        border-radius: 1rem;
     }
 
     &__circle {
@@ -113,7 +113,17 @@
         padding: 0;
     }
     &__shadow {
+        //丑陋，可以用elevation代替
         box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12)
+    }
+
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .@{prefix}-spin {
+            margin-right: 0.05rem;
+        }
     }
 
 }
